@@ -10,12 +10,12 @@ const Landing = React.createClass({
   },
   propTypes: {
     searchTerm: string,
-    dispatch: func
+    dispatchSetSearchTerm: func
   },
-  handleSearchTermChange(event) {
-    this.props.dispatch(setSearchTerm(event.target.value))
+  handleSearchTermChange (event) {
+    this.props.dispatchSetSearchTerm(event.target.value)
   },
-  handleSearchSubmit(event) {
+  handleSearchSubmit (event) {
     event.preventDefault()
     this.context.router.transitionTo('/search')
   },
@@ -38,4 +38,12 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(Landing)
+const mapDispatchToProps = (dispatch) => {
+  return {
+    dispatchSetSearchTerm (searchTerm) {
+      dispatch(setSearchTerm(searchTerm))
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Landing)
