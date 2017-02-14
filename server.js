@@ -24,7 +24,7 @@ server.use((req, res) => {
     )
   )
 
-  res.write(template({body:  body}))
+  res.write(template({body: body}))
   res.end()
 })
 
