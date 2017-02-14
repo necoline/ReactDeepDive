@@ -1,9 +1,9 @@
 {
   "name": "complete-intro-to-react",
   "version": "1.0.0",
-  "description": "A two day workshop on a complete intro to React",
+  "description": "An ESL Library",
   "main": "index.js",
-  "author": "Brian Holt <btholt@gmail.com>",
+  "author": "Necoline Hubner <hnhubner@gmail.com>",
   "license": "MIT",
   "scripts": {
     "lint": "eslint js/**/*.js webpack.config.js",
